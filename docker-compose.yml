@@ -1,0 +1,12 @@
+services:
+ db:
+  image: mysql:8.0
+  command: mysqld --character-set-server=utf8mb4
+collection-server=utf8mb4_general_ci
+  ports:
+  - 33366 : 3306
+  volumes:
+  - ./ mysql:/var/ lib / mysql
+  environment:
+   MYSQL_DATABASE: rails_textbook_local
+   MYSQL_ROOT_PASSWORD: root
