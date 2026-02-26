@@ -1,10 +1,10 @@
 services:
  db:
   image: mysql:8.0
-  command: mysqld --character-set-server=utf8mb4
-collection-server=utf8mb4_general_ci
-  ports:
-  - 33366 : 3306
+  command: mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+  #注意
+  ports: 
+  - "3306:3306"
   volumes:
   - ./ mysql:/var/ lib / mysql
   environment:
