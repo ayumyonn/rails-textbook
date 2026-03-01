@@ -1,0 +1,13 @@
+services:
+ db:
+  image: mysql:8.0
+  command: mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+  #注意
+  ports: 
+  - "3306:3306"
+  volumes:
+  - ./ mysql:/var/ lib / mysql
+  environment:
+   MYSQL_DATABASE: rails_textbook_local
+   MYSQL_ROOT_PASSWORD: root
+   #export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.2.0/bin:$PATH"
